@@ -1,0 +1,283 @@
+html{
+    height: 100%;
+}
+body{
+    min-height: 100%;
+    font-family: 'Slabo 27px', serif;
+    display: grid;
+    grid-template-columns: 200px 1fr; /* 250px + "largeur restante" */
+    grid-template-rows: 1fr;
+}
+header {
+    grid-column: 1; grid-row: 1;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    grid-column: 2; grid-row: 1;
+    padding: 20px;
+    position: relative;
+}
+nav > *, header h1{
+    display:block;
+    padding: 10px;
+    color: #ccc;
+    text-decoration: none;
+    transition:background-color, 250ms;
+}
+nav > *:hover{
+    background-color: #43334F;
+}
+nav span{
+    font-style: italic;
+    font-size: 0.9rem;
+    border-top: 1px solid #ccc;
+}
+nav a.active{
+    color: #fff;
+    background: blueviolet;
+}
+main > h1:first-child{
+    font-size: 2rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+main h1, main fieldset legend{
+    font-size: 1.5rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+main h2{
+    font-size: 1.3rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+main ul{
+    width:100%;
+    box-sizing: border-box;
+    display:flex;
+    flex-wrap:wrap;
+}
+main li, main ul > a{
+    padding:20px;
+    border-radius:10px;
+    border: 1px blueviolet solid;
+    min-width: calc(50% - 60px);
+    max-width: calc(50% - 60px);
+    flex:1 1 auto;
+
+    margin:15px;
+    box-sizing:border-box;
+}
+
+ul.Requests-index li{
+    display:flex;
+    justify-content:space-between;
+}
+
+main li div:first-child{
+    display:flex;
+    justify-content: space-between;
+}
+
+main li div:nth-child(2){
+    text-align: center;
+    margin:10px 0 0 0;
+}
+
+main li figure{
+    height:100%;
+    max-width:50% !important;
+    margin-left:20px;
+}
+
+main li div:first-child > a{
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+main ul > a{
+    background-color: blueviolet;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+}
+
+main > p{
+    padding:20px;
+}
+
+main > blockquote{
+    padding:20px;
+    background-color: blueviolet;
+    text-align: end;
+    border-radius:5px;
+    color: #fff;
+    font-size:2rem;
+    font-weight: bold;
+}
+main > cite{
+    display:block;
+    padding: 20px;
+    text-align:end;
+}
+
+h3{
+    font-size:1.5rem;
+    font-style:italic;
+    font-weight: bold;
+    color: blueviolet;
+}
+
+.viewContainer{
+    display:flex;
+    justify-content: space-between;
+    padding:20px;
+}
+
+.viewContainer > *{
+    padding:20px;
+}
+
+.viewContainer > div:first-child{
+    min-width:30%;
+}
+
+.picture{
+    max-width:50%;
+}
+
+.viewEdit{
+    display:flex;
+    justify-content: end;
+    margin-top:20px;
+}
+
+.viewEdit > div{
+    background-color:blueviolet;
+    margin-right:10px;
+    padding:10px 15px;
+    border-radius:5px;
+}
+
+.viewEdit > div:last-child{
+    margin-right:0;
+}
+
+.viewEdit > div a{
+    color: #fff;
+}
+
+.viewEdit > div:hover{
+    background-color: #43334F;
+}
+
+h3 + div{
+    padding:20px;
+}
+
+label,
+.label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+p,
+div.input{
+    margin-bottom: 20px;
+}
+button,
+.button{
+    text-decoration: none;
+    background: #2b67c6;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 3px;
+    border: none;
+}
+input,
+textarea{
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.poster{
+    max-width: 400px;
+}
+
+.poster img{
+    width:100%;
+}
+
+.message{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #66a1ff;
+    color: #000;
+    padding: 10px 15px;
+}
+.message.success{
+    background: #3aad44;
+}
+.message.error{
+    background: #cc2e2e;
+    color: #fff;
+}
+.message.hidden{
+    display: none;
+}
+
+figure{
+    position: relative;
+}
+figcaption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background:rgba(0,0,0,.6);
+    color: #fff;
+    transition: all 0.5s;
+}
+figure:hover figcaption{
+    opacity: 0;
+}
+
+.viewArtist-sub{
+    display:flex;
+}
+
+.viewArtist-sub > div{
+    padding:15px;
+}
+
+.viewArtist-sub > div:first-child{
+    min-width:50%;
+}
+
+.viewArtist-sub > div > div:nth-of-type(2){
+    display:flex;
+}
+
+.viewArtist-sub > div > div:first-child{
+
+}
+
+.viewArtist-sub > div > div > div{
+    margin:15px;
+}
+
+.editBar{
+    text-align:right;
+}
